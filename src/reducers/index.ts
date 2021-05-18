@@ -1,9 +1,14 @@
 import { Store } from 'redux';
-import { ActionModel } from '../types/Models';
+import { data } from '../data';
+import { ActionModel, DataEntry } from '../types/Models';
 
-export interface StateType {}
+export interface StateType {
+  entries: DataEntry[];
+}
 
-let initialState: StateType = {};
+let initialState: StateType = {
+  entries: data.data,
+};
 
 export type StoreType = Store<StateType, ActionModel>;
 
