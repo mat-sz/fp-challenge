@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { Box } from './components/Box';
+import { BoxTitle } from './components/BoxTitle';
 import { Chart } from './components/Chart';
 import { Grid } from './components/Grid';
 import { Header } from './components/Header';
@@ -9,8 +10,6 @@ import { Logo } from './components/Logo';
 import { Table } from './components/Table';
 import { GlobalStyle } from './globalStyle';
 import { StateType } from './reducers';
-
-const title = process.env.REACT_APP_TITLE || '';
 
 export const App: React.FC = () => {
   const entries = useSelector((state: StateType) => state.entries);
@@ -25,9 +24,11 @@ export const App: React.FC = () => {
           </Box>
         </Header>
         <Box>
+          <BoxTitle>Chart</BoxTitle>
           <Chart />
         </Box>
         <Box>
+          <BoxTitle>Table</BoxTitle>
           <Table>
             <thead>
               <tr>

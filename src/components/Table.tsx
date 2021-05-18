@@ -14,8 +14,9 @@ export const Table = styled.table`
   }
 
   th {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
   }
 
   tr:nth-child(even) {
