@@ -20,29 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     background: #fafafa;
   }
 
-  /* Awful hack, but style props aren't working on react-split-pane... */
   body > div {
     height: 100vh;
-
-    & > div {
-      & > div:nth-child(2) {
-        width: 15px;
-        background: #777;
-        background-clip: padding-box;
-
-        &:hover {
-          border-left: 5px solid rgba(0,0,0,0.1);
-          border-right: 5px solid rgba(0,0,0,0.1);
-        }
-      }
-
-      & > div:not(:nth-child(2)) {
-        display: flex;
-
-        & > * {
-          flex: 1;
-        }
-      }
-    }
   }
 `;

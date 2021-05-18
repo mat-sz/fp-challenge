@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import SplitPane from 'react-split-pane';
 
 import { Box } from './components/Box';
 import { Chart } from './components/Chart';
+import { Grid } from './components/Grid';
 import { Table } from './components/Table';
 import { GlobalStyle } from './globalStyle';
 import { StateType } from './reducers';
@@ -14,7 +14,7 @@ export const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
-      <SplitPane>
+      <Grid>
         <Box>
           <Chart />
         </Box>
@@ -38,7 +38,7 @@ export const App: React.FC = () => {
             </tbody>
           </Table>
         </Box>
-      </SplitPane>
+      </Grid>
     </>
   );
 };
