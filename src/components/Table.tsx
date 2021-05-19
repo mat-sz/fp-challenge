@@ -22,4 +22,12 @@ export const Table = styled.table`
   tr:nth-child(even) {
     background: #fafafa;
   }
+
+  tr {
+    cursor: pointer;
+  }
+
+  tr.selected {
+    background: #ddd;
+  }
 `;
